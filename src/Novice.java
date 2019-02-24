@@ -51,7 +51,7 @@ public class Novice {
         System.out.println("-------------------------------------");
     }
 
-    public int levelUp(){
+    public int attack(){
         hp = hp-(150+level);
         exp = exp + (20+level);
         if(hp <= 0 ){

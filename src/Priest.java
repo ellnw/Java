@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Priest extends Novice {
     private String job;
     private String skill;
-    private int hp,maxHp,maxExp,maxLevel,maxSp,exp,level;
+    private int hp,maxHp,maxLevel,maxSp,exp,level;
     private int sumHp;
     int select,boots;
     Scanner input = new Scanner(System.in);
@@ -49,8 +49,8 @@ public class Priest extends Novice {
 
     public void revive_life_skill(){
         if(maxHp == 0 && maxSp == 0){
-            maxHp = levelUp() + 500;
-            maxSp = levelUp() + 500;
+            maxHp = attack() + 500;
+            maxSp = attack() + 500;
         }
         else{
             System.out.println("return hometown" );

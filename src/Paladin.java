@@ -1,7 +1,7 @@
 public class Paladin extends Novice {
     private String job;
     private String skill;
-    private int hp,maxHp,maxExp,maxLevel,exp,level,maxSp;
+    private int maxHp,maxLevel,level,maxSp,atk = 500;
 
     public void reStat(){
         System.out.println("---------------------------------");
@@ -18,15 +18,28 @@ public class Paladin extends Novice {
     }
 
     public void shield_skill(){
-
+        System.out.println("if you have shield");
+        atk = atk_skill() - 700;
+        System.out.println("atk =  " + atk);
+        maxHp = get_hp() + 1000;
+        System.out.println("Hp =  " + maxHp);
     }
 
-    public void atk_skill(){
-
+    public int atk_skill(){
+        atk = atk + 2100;
+        System.out.println("atk =  " + atk);
+        maxHp = get_hp() - 200;
+        System.out.println("Hp =  " + maxHp);
+        return atk;
     }
 
     public void buff_skill(){
-
+        maxLevel = level + 2;
+        System.out.println("level" + level);
+        maxHp = get_hp() + 500;
+        System.out.println("Hp =  " + maxHp);
+        maxSp = maxSp + 400;
+        System.out.println("Sp =  " + maxSp);
     }
 
 }

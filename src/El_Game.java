@@ -55,7 +55,7 @@ public class El_Game {
             System.out.println("---------------------------------");
             System.out.println("New status:");
             s2.reStat();
-            System.out.println("Skill: ");
+            System.out.println("Skill:\t[1]:shield\t[2]:atk\t[3]:buff");
             skillPa = input1.nextInt();
             if (skillPa == 1){
                 s2.shield_skill();
@@ -73,9 +73,9 @@ public class El_Game {
         }
     }
 
+
+
 /*
-
-
     public static void system(){
         int select;
         Novice myNovice =  new Novice();
@@ -99,7 +99,7 @@ public class El_Game {
             System.out.println("1: attack\t2.status\n3.OpenBag");
             select = input.nextInt();
             if( select == 1){
-                myNovice.levelUp();
+                myNovice.attack();
                 System.out.println("--------------------------------------------");
                 System.out.println("ํYou drop item: ");
                 System.out.print("ํHave you want it?Y/N: ");
@@ -138,7 +138,7 @@ public class El_Game {
             System.out.print("Move Key w,a,s,d: ");
             myNovice.walk();
 
-            if (myNovice.levelUp() >= 5){
+            if (myNovice.attack() >= 5){
                 System.out.println("MaxLevel = 10");
                 System.out.println("You can Awake");
                 System.out.println("You must go to Select JOB");
@@ -146,6 +146,6 @@ public class El_Game {
 
             }
         }
-    }
-      */
+    }          */
+
 }
