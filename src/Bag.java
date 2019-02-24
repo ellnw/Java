@@ -132,11 +132,10 @@ public class Bag {
         mItem.selectWeapon();
     }
 
-    public void select_potion(){
+    public void select_potion() {
         myPotion.potionItem();
 
     }
-
 
 
 

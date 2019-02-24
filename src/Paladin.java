@@ -33,7 +33,7 @@ public class Paladin extends Novice {
         return atk;
     }
 
-    public void buff_skill(){
+    public void buff_skill() {
         maxLevel = level + 2;
         System.out.println("level" + level);
         maxHp = get_hp() + 500;

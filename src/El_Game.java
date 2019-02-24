@@ -41,35 +41,31 @@ public class El_Game {
                 myNovice.showStat();
             }
 
-            else if (select == 3){
+            else if (select == 3) {
                 System.out.print("press i: ");
                 myNovice.openBag();
-                if(select == 3){
+                if (select == 3) {
                     System.out.print("You can select object in function: ");
                     int number = num.nextInt();
-                    if (number == 1){
+                    if (number == 1) {
                         myNovice.function_weapon();
                         System.out.print("Start weapon: key [6]: and Not key [0] ");
                         number = input.nextInt();
-                        if(number == 6){
+                        if (number == 6) {
                             myNovice.selectWeapon();
                         }
-                    }
-
-                    else if (number == 2)
+                    } else if (number == 2)
                         myNovice.function_armor();
 
                     else if (number == 3) {
                         myNovice.function_medicine();
                         System.out.print("show potion: key [1]: ");
                         number = num.nextInt();
-                        if (number == 1){
+                        if (number == 1) {
                             myNovice.selectPotion();
-                            }
+                        }
 
-                    }
-
-                    else if(number == 0){
+                    } else if (number == 0) {
                         System.out.println("Exits");
                     }
                 }

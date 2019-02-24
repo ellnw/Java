@@ -125,7 +125,7 @@ public class Novice {
         mineBag.select_potion();
     }
 
-    public void getItem(){
+    public void getItem() {
 
         bag.found_item();
     }

@@ -10,7 +10,7 @@ public class Priest extends Novice {
     Novice hp1 = new Novice();
 
 
-    public void reStat(){
+    public void reStat() {
         System.out.println("---------------------------------");
         System.out.println("class : Priest");
         System.out.println("maxExp = " + 200);
