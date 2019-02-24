@@ -52,13 +52,13 @@ public class Novice {
     }
 
     public int attack(){
-        hp = hp-(150+level);
-        exp = exp + (20+level);
+        hp = hp-200;
+        exp = exp + 35;
         if(hp <= 0 ){
             System.out.println("You Died");
         }
         if(exp >= maxExp) {
-            System.out.println("Level Up");
+            System.out.println("Level Up: " + level);
             level = level + 1;
             maxLevel = level;
             exp = exp - maxExp;
@@ -117,14 +117,20 @@ public class Novice {
         mineBag.showBag();
     }
 
+    public void selectWeapon(){
+        mineBag.select_weapon();
+    }
+
+    public void selectPotion(){
+        mineBag.select_potion();
+    }
+
     public void getItem(){
 
         bag.found_item();
     }
 
-    public void full_bag(Item item){
-        bag.fullBag(item);
-    }
+
 
 
 

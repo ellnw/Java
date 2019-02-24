@@ -5,9 +5,9 @@ import java.util.List;
 public class Bag {
     private ArrayList<Item> items;
     private int limit;
-    private Item item;
+    Potion myPotion = new Potion();
+    //private Item item;
     char select;
-    int number;
     String sh;
     String sh2 = "i";
     Item mItem = new Item();
@@ -39,12 +39,15 @@ public class Bag {
             weapon.add("Bow");
             weapon.add("Wand");
             weapon.add("Shield");
+            weapon.add("Stat weapon");
             System.out.println("Have: " + weapon.size() + " " + "weapon");
             System.out.println("[1] = " + weapon.get(0));
             System.out.println("[2] = " + weapon.get(1));
             System.out.println("[3] = " + weapon.get(2));
             System.out.println("[4] = " + weapon.get(3));
             System.out.println("[5] = " + weapon.get(4));
+            System.out.println("[6] = " + weapon.get(5));
+
 
     }
 
@@ -60,6 +63,7 @@ public class Bag {
             System.out.println("[3] = " + armor.get(2));
             System.out.println("[4] = " + armor.get(3));
             System.out.println("[5] = " + armor.get(4));
+
 
     }
 
@@ -107,7 +111,6 @@ public class Bag {
         }
         else
             System.out.println("Don't Show");
-
     }
 
 
@@ -125,13 +128,17 @@ public class Bag {
         }
     }
 
-
-    public void getCoin(){
-        item.getCoin();
+    public void select_weapon(){
+        mItem.selectWeapon();
     }
 
-    public void dropItem(){
-        mItem.killMonster();
+    public void select_potion(){
+        myPotion.potionItem();
+
     }
+
+
+
+
 
 }

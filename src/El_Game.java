@@ -1,15 +1,100 @@
 import java.util.Scanner;
-import java.util.ArrayList;
+
 
 public class El_Game {
 
     public static void main(String[] args) {
-        //system();
-        awaking();
+        int select;
+        Novice myNovice =  new Novice();
+        Potion myPotion = new Potion();
+        Scanner num = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        Bag myBag = new Bag();
+        Item myItem = new Item();
+        System.out.println("Create Novice");
+        System.out.print("Novice Name: ");
+        myNovice.insertName();
+        System.out.println("Start Status:");
+        System.out.println("HP = " + myNovice.get_hp());
+        myItem.weapon();
+        myItem.selectWeapon();
+        System.out.println("--------------------------------------------");
+        System.out.println("Ready go");
+        System.out.println("--------------------------------------------");
+
+        while(true) {
+            System.out.println("--------------------------------------------");
+            System.out.println("Press key");
+            System.out.println("1: attack\t2.status\t3.OpenBag");
+            System.out.println("--------------------------------------------");
+            select = input.nextInt();
+            if( select == 1){
+                myNovice.attack();
+                System.out.println("--------------------------------------------");
+                System.out.println("ํYou drop item: ");
+                System.out.print("ํHave you want it?Y/N: ");
+                myBag.found_item();
+
+            }
+
+            else if (select == 2){
+                myNovice.showStat();
+            }
+
+            else if (select == 3){
+                System.out.print("press i: ");
+                myNovice.openBag();
+                if(select == 3){
+                    System.out.print("You can select object in function: ");
+                    int number = num.nextInt();
+                    if (number == 1){
+                        myNovice.function_weapon();
+                        System.out.print("Start weapon: key [6]: and Not key [0] ");
+                        number = input.nextInt();
+                        if(number == 6){
+                            myNovice.selectWeapon();
+                        }
+                    }
+
+                    else if (number == 2)
+                        myNovice.function_armor();
+
+                    else if (number == 3) {
+                        myNovice.function_medicine();
+                        System.out.print("show potion: key [1]: ");
+                        number = num.nextInt();
+                        //System.out.print("Start potion: key [1]: ");
+                        if (number == 1){
+                            myNovice.selectPotion();
+                            }
+
+                    }
+
+                    else if(number == 0){
+                        System.out.println("Exits");
+                    }
+                }
+            }
+
+            else if (select == 0){
+                break;
+            }
+
+            System.out.print("Move Key w,a,s,d: ");
+            myNovice.walk();
+
+            if (myNovice.attack() >= 5){
+                System.out.println("MaxLevel = 10");
+                System.out.println("You can Awake");
+                System.out.println("You must go to Select JOB");
+                break;
+            }
+        }
+        //awaking();
     }
 
 
-
+/*
 
     public static void awaking(){
         int select1,skillPr,skillPa;
@@ -40,9 +125,6 @@ public class El_Game {
             else if (skillPr == 3){
                 s1.revive_life_skill();
             }
-            else{
-                //system();
-            }
 
         }
         else if(select1 == 2)
@@ -66,86 +148,14 @@ public class El_Game {
             else if (skillPa == 3){
                 s2.buff_skill();
             }
-            else{
-                //system();
-            }
+
 
         }
     }
+*/
 
 
 
-/*
-    public static void system(){
-        int select;
-        Novice myNovice =  new Novice();
-        Scanner num = new Scanner(System.in);
-        Scanner input = new Scanner(System.in);
-        Bag myBag = new Bag();
-        Item myItem = new Item();
-        System.out.println("Create Novice");
-        System.out.print("Novice Name: ");
-        myNovice.insertName();
-        System.out.println("Start Status:");
-        System.out.println("HP = " + myNovice.get_hp());
-        myItem.weapon();
-        myItem.selectWeapon();
-        System.out.println("--------------------------------------------");
-        System.out.println("Ready go");
-        System.out.println("--------------------------------------------");
 
-        while(true) {
-            System.out.println("Press key");
-            System.out.println("1: attack\t2.status\n3.OpenBag");
-            select = input.nextInt();
-            if( select == 1){
-                myNovice.attack();
-                System.out.println("--------------------------------------------");
-                System.out.println("ํYou drop item: ");
-                System.out.print("ํHave you want it?Y/N: ");
-                myBag.found_item();
-
-            }
-
-            else if (select == 2){
-                myNovice.showStat();
-            }
-
-            else if (select == 3){
-                System.out.print("press i: ");
-                myNovice.openBag();
-                if(select == 3){
-                    System.out.print("You can select object in function: ");
-                    int number = num.nextInt();
-                    if (number == 1)
-                        myNovice.function_weapon();
-                    else if (number == 2)
-                        myNovice.function_armor();
-                    else if (number == 3)
-                        myNovice.function_medicine();
-                    else if (number == 4)
-                        myNovice.function_dress();
-                    else if(number == 0){
-                        System.out.println("Exits");
-                    }
-                }
-            }
-
-            else if (select == 0){
-                break;
-            }
-
-            System.out.print("Move Key w,a,s,d: ");
-            myNovice.walk();
-
-            if (myNovice.attack() >= 5){
-                System.out.println("MaxLevel = 10");
-                System.out.println("You can Awake");
-                System.out.println("You must go to Select JOB");
-                break;
-
-            }
-        }
-    }          */
 
 }
