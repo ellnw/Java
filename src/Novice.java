@@ -2,23 +2,32 @@ import java.util.Scanner;
 
 public class Novice {
     private Bag bag;
-    private int hp;
+    private int hp,maxHp,maxExp,maxLevel,maxSp;
     private int level;
-    private int up = 10;
-    char w,a,s,d;
+    private int exp;
     char walk;
-    String attack;
-    String at1 = "y";
     Bag mineBag = new Bag();
     Scanner na = new Scanner(System.in);
     Scanner wa = new Scanner(System.in);
     Scanner at = new Scanner(System.in);
-    Scanner num = new Scanner(System.in);
     String name;
 
     public Novice() {
-        hp = 1000;
+        maxExp = 100;
+        maxHp = 1000;
+        maxSp = 0;
+        exp = 0;
+        level = 1;
     }
+
+    public void novice_stat() {
+        System.out.println("maxExp = " + 100);
+        System.out.println("maxHp = : " + 500);
+        System.out.println("maxSp = : " + 0);
+        System.out.println("exp = " + 0);
+        System.out.println("level =  " + 1);
+    }
+
 
     public void insertName() {
 
@@ -29,44 +38,47 @@ public class Novice {
         return hp = 1000;
     }
 
-    public int eat() {
-        hp = hp + 100;
+
+
+    public void showStat(){
+        System.out.println("-------------------------------------");
+        System.out.println("                Status");
+        System.out.println("-------------------------------------");
+        System.out.println("Name : " +name);
+        System.out.println("Level : " +level);
+        System.out.println("Hp : " + hp + "/" + maxHp);
+        System.out.println("Exp : " + exp + "/" + maxExp);
+        System.out.println("-------------------------------------");
+    }
+
+    public int levelUp(){
+        hp = hp-(150+level);
+        exp = exp + (20+level);
+        if(hp <= 0 ){
+            System.out.println("You Died");
+        }
+        if(exp >= maxExp) {
+            System.out.println("Level Up");
+            level = level + 1;
+            maxLevel = level;
+            exp = exp - maxExp;
+            maxHp = maxHp + 100;
+            maxExp = maxExp + 5;
+            hp = maxHp;
+
+        }
+        return maxLevel;
+    }
+
+
+    public int hpMethod() {
+        hp = get_hp();
+        if (hp <= 300)
+            System.out.println("Low HP");
         return hp;
     }
 
 
-    public void hpMethod() {
-        hp = get_hp();
-        if (hp <= 800)
-            System.out.println("Low HP");
-    }
-
-    public void stamina() {
-        int run, max = 200, speed = 50;
-        for (run = 0; run < max; run++) {
-            if (run <= 150) {
-                run = run + speed;
-            } else {
-                run = run - speed;
-            }
-        }
-    }
-
-    public int level() {
-        if (level > up) {
-            up = up + 1;
-        }
-        return up;
-    }
-
-    public void attack_Monster() {
-        attack = at.nextLine();
-            if (attack.equals(at1)) {
-                hp = hp - 400;
-                System.out.println("HP: " + hp);
-                System.out.println("Monster is Dead");
-            }
-    }
 
     public void walk(){
         walk = wa.next().charAt(0);
@@ -101,8 +113,12 @@ public class Novice {
         mineBag.listDress();
     }
 
+    public void openBag(){
+        mineBag.showBag();
+    }
 
     public void getItem(){
+
         bag.found_item();
     }
 
@@ -114,4 +130,8 @@ public class Novice {
 
 
 
+
+
 }
+
+

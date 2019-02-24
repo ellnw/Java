@@ -103,6 +103,7 @@ public class Bag {
             System.out.println("2.armor");
             System.out.println("3.medicine");
             System.out.println("4.dress");
+            System.out.println("0.Exits");
         }
         else
             System.out.println("Don't Show");
