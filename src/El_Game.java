@@ -90,11 +90,11 @@ public class El_Game {
                 break;
             }
         }
-        //awaking();
+        awaking();
     }
 
 
-/*
+
 
     public static void awaking(){
         int select1,skillPr,skillPa;
@@ -152,7 +152,7 @@ public class El_Game {
 
         }
     }
-*/
+
 
 
 
