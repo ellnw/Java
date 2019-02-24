@@ -63,7 +63,6 @@ public class El_Game {
                         myNovice.function_medicine();
                         System.out.print("show potion: key [1]: ");
                         number = num.nextInt();
-                        //System.out.print("Start potion: key [1]: ");
                         if (number == 1){
                             myNovice.selectPotion();
                             }
