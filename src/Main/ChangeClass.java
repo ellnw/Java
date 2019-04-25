@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 public class ChangeClass {
 
     private JPanel chClass;
+    private  JPanel panel1;
+    private JPanel panel2;
     private JButton priestClass;
     private JButton wizardClass;
     private JLabel text;
@@ -19,6 +21,8 @@ public class ChangeClass {
         priestClass = new JButton();
         wizardClass = new JButton();
         text = new JLabel();
+        panel1 = new JPanel();
+        panel2 = new JPanel();
         nov = novice;
 
         chClass.setLayout(new GridLayout(3,2));
@@ -27,10 +31,14 @@ public class ChangeClass {
         text.setText("Select Class");
         priestClass.setText("Priest");
         wizardClass.setText("Wizard");
+        priestClass.setFont(new Font("",0,50));
+        wizardClass.setFont(new Font("",0,50));
 
         chClass.add(text);
-        chClass.add(priestClass);
-        chClass.add(wizardClass);
+        panel1.add(priestClass);
+        panel2.add(wizardClass);
+        chClass.add(panel1);
+        chClass.add(panel2);
 
         priestClass.addActionListener(new ActionListener() {
             @Override

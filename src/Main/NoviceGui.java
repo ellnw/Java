@@ -102,7 +102,7 @@ public class NoviceGui extends JFrame {
                     current.dispose();
                 }
                 else
-                    JOptionPane.showMessageDialog(null,"Level should than 5","Warning",JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Level should than 3","Warning",JOptionPane.WARNING_MESSAGE);
             }
         });
 
@@ -113,7 +113,7 @@ public class NoviceGui extends JFrame {
 
 
     public void load(NoviceGui loads){
-        JFrame frame = new JFrame("start");
+        JFrame frame = new JFrame("Status");
         frame.setContentPane(loads.Name);
         frame.pack();
         frame.setResizable(true);
