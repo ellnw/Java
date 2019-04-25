@@ -1,12 +1,17 @@
+import Main.NoviceGui;
+import Mons.Monster;
+
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.List;
 
-public class Bag {
+public class Bag extends JPanel {
     private ArrayList<Item> items;
     private int limit;
     Potion myPotion = new Potion();
-    //private Item item;
     char select;
     String sh;
     String sh2 = "i";
@@ -17,39 +22,99 @@ public class Bag {
     ArrayList<String> dress = new ArrayList<String>();
     Scanner se = new Scanner(System.in);
     Scanner sh1 = new Scanner(System.in);
+//GUI
+    private JTextField sizeBox;
+    private JTextField sizeBoxArmor;
+    JButton btn1detail;
+    JButton btn2detail;
+    JButton btn3detail;
+    JButton btn4detail;
+    JPanel left = new JPanel();
+    JPanel right = new JPanel();
+    JPanel center = new JPanel();
+    JPanel top = new JPanel();
+    JPanel bottom = new JPanel();
+    JTextField top1;
 
 
     public Bag(){
         items = new ArrayList<>();
         limit = 100;
+        setLayout();
 
     }
 
-     public void fullBag(Item newItem){
-        if(items.size() <= limit )
-            items.add(newItem);
-        else
-            System.out.println("Full Bag");
-     }
-
-
     public void listWeapon(){
-            weapon.add("Sickle");
-            weapon.add("Sword");
-            weapon.add("Bow");
-            weapon.add("Wand");
-            weapon.add("Shield");
-            weapon.add("Stat weapon");
-            System.out.println("Have: " + weapon.size() + " " + "weapon");
-            System.out.println("[1] = " + weapon.get(0));
-            System.out.println("[2] = " + weapon.get(1));
+
+        weapon.add("Sickle" );
+        weapon.add("Sword");
+        weapon.add("Bow");
+        weapon.add("Wand");
+        weapon.add("Shield");
+        weapon.add("Stat weapon");
+         System.out.println("Have: " + weapon.size() + " " + "weapon");
+         for (int i = 0; i < weapon.size(); i++)
+                System.out.println("[ " + i + " ]"  + weapon.get(i));
+           /* System.out.println("[2] = " + weapon.get(1));
             System.out.println("[3] = " + weapon.get(2));
             System.out.println("[4] = " + weapon.get(3));
             System.out.println("[5] = " + weapon.get(4));
-            System.out.println("[6] = " + weapon.get(5));
+            System.out.println("[6] = " + weapon.get(5));*/
 
 
     }
+
+    private void setLayout() {
+        listWeapon();
+        listArmor();
+        listMedicine();
+
+        //Set layout weapon-----------------------------------------------------
+        JList<String> list = new JList<>(weapon.toArray(new String[0]));
+
+        JScrollPane scrollPane = new JScrollPane(list);
+        add(scrollPane, BorderLayout.CENTER);
+        setLayout(new BorderLayout(5,5));
+
+        JList<String> listArmor = new JList<>(armor.toArray(new String[0]));
+        JScrollPane scrollPaneArmor = new JScrollPane(listArmor);
+        add(scrollPaneArmor, BorderLayout.CENTER);
+        setLayout(new BorderLayout(5,5));
+
+        JList<String> listMedicine = new JList<>(medicine.toArray(new String[0]));
+        JScrollPane scrollPaneMedicine = new JScrollPane(listMedicine);
+        add(scrollPaneMedicine, BorderLayout.CENTER);
+        setLayout(new BorderLayout(5,5));
+
+        //sizeBox();
+
+        sizeBox = new JTextField("All Weapon: " + weapon.size() + "\tAll Armor: " + armor.size() + "\tAll medicine: " + medicine.size()
+                ,JTextField.CENTER);
+        sizeBox.setEditable(false);  // ensures that the list text cannot be edited in the panel
+        sizeBox.setOpaque(true);
+        sizeBox.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        sizeBox.setFont(new Font("Serif", Font.BOLD, 14));
+
+        add(left, BorderLayout.WEST);
+        add(right, BorderLayout.EAST);
+        add(center, BorderLayout.CENTER);
+        add(bottom, BorderLayout.SOUTH);
+
+        // place series of grid layouts inside the border layout components
+        left.setLayout(new GridLayout(4,1));
+        right.setLayout(new GridLayout(5,2));
+
+        center.setLayout(new BorderLayout(1,2));
+        center.add(list,BorderLayout.WEST);
+        center.add(listArmor,BorderLayout.CENTER);
+        center.add(listMedicine,BorderLayout.EAST);
+        center.add(top,BorderLayout.NORTH);
+        top.setLayout(new GridLayout(5,2,5,1));
+        bottom.setLayout(new GridLayout(1,2,5,5));
+        bottom.add(sizeBox);
+
+    }
+
 
     public void listArmor(){
             armor.add("Dragone Armor");
@@ -67,6 +132,7 @@ public class Bag {
 
     }
 
+
     public void listMedicine(){
 
             medicine.add("HP bottle");
@@ -83,7 +149,7 @@ public class Bag {
 
     }
 
-    public void listDress(){
+    public void listDress1(){
             dress.add("Earring");
             dress.add("Glove");
             dress.add("necklace");
@@ -96,6 +162,9 @@ public class Bag {
             System.out.println("[4] = " + dress.get(3));
             System.out.println("[5] = " + dress.get(4));
     }
+
+
+
 
 
     public void showBag() {
@@ -136,6 +205,13 @@ public class Bag {
         myPotion.potionItem();
 
     }
+
+
+
+//    public static void main(String[] args) {
+//        Bag loads = new Bag();
+//        loads.load();
+//    }
 
 
 

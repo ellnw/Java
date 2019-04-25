@@ -2,7 +2,13 @@ import java.util.Scanner;
 
 public class Novice {
     private Bag bag;
-    private int hp,maxHp,maxExp,maxLevel,maxSp;
+
+    private int hp,maxSp;
+    protected int maxHp;
+    protected int maxExp;
+    protected int maxLevel;
+
+
     private int level;
     private int exp;
     char walk;
@@ -12,13 +18,19 @@ public class Novice {
     Scanner at = new Scanner(System.in);
     String name;
 
-    public Novice() {
+    public Novice(String name) {
+        this.name = name;
         maxExp = 100;
         maxHp = 1000;
         maxSp = 0;
         exp = 0;
         level = 1;
     }
+
+    public Novice() {
+
+    }
+
 
     public void novice_stat() {
         System.out.println("maxExp = " + 100);
@@ -32,6 +44,10 @@ public class Novice {
     public void insertName() {
 
         name = na.nextLine();
+    }
+
+    public String getName(){
+        return name;
     }
 
     public int get_hp() {
@@ -110,8 +126,11 @@ public class Novice {
         mineBag.listMedicine();
     }
     public void function_dress(){
-        mineBag.listDress();
+        mineBag.listDress1();
     }
+
+
+
 
     public void openBag(){
         mineBag.showBag();

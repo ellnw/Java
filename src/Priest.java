@@ -9,6 +9,11 @@ public class Priest extends Novice {
     Scanner input = new Scanner(System.in);
     Novice hp1 = new Novice();
 
+    public Priest(String name) {
+        super(name);
+    }
+
+
 
     public void reStat() {
         System.out.println("---------------------------------");
