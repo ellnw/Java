@@ -15,13 +15,14 @@ public class Bag extends JPanel {
     private int limit;
     Potion myPotion = new Potion();
     //private Item item;
+    private  JButton select;
 
     ArrayList<String> weapon = new ArrayList<String>();
     ArrayList<String> armor = new ArrayList<String>();
     ArrayList<String> medicine = new ArrayList<String>();
     ArrayList<String> dress = new ArrayList<String>();
-    Scanner se = new Scanner(System.in);
-    Scanner sh1 = new Scanner(System.in);
+//    Scanner se = new Scanner(System.in);
+//    Scanner sh1 = new Scanner(System.in);
 
     //GUI
     private JTextField sizeBox;
@@ -35,7 +36,9 @@ public class Bag extends JPanel {
     public Bag(){
         items = new ArrayList<>();
         limit = 100;
+        select = new JButton();
         setLayout();
+
     }
 
 

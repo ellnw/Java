@@ -3,6 +3,8 @@ package Gui;
 
 
 
+import Main.Novice;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -28,7 +30,6 @@ public class MainGui {
         Start.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 Name a = new Name();
                 a.load(a);
                 JFrame current = (JFrame) SwingUtilities.getWindowAncestor(mainForm);
@@ -38,7 +39,8 @@ public class MainGui {
         Exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                JFrame current = (JFrame) SwingUtilities.getWindowAncestor(mainForm);
+                current.dispose();
             }
         });
 

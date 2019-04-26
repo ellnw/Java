@@ -31,6 +31,7 @@ public class Monster extends JPanel {
     JPanel center = new JPanel();
     JPanel top = new JPanel();
     JPanel bottom = new JPanel();
+    private Novice add;
 
     Novice novice = new Novice();
 
@@ -42,6 +43,7 @@ public class Monster extends JPanel {
         nameMons.add("Jjja");
         nameMons.add("Horn");
         this.novice = novice;
+
 
         // this section performs and displays the shuffle operation
         Collections.shuffle(nameMons);
@@ -80,11 +82,11 @@ public class Monster extends JPanel {
         bottom.setLayout(new GridLayout(1,2,5,5));
         bottom.add(sizeBox);
 
-        selectMons();
+        selectMons(novice);
     }
 
 
-    public void selectMons(){
+    public void selectMons(Novice no){
         ActionListener westListener = new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
@@ -97,7 +99,8 @@ public class Monster extends JPanel {
 
                         if (killbill == 0) { //The ISSUE is here
                            novice.attackKillbill();
-                            NoviceGui m = new NoviceGui(novice,"");
+                            String dok = new String() ;
+                            NoviceGui m = new NoviceGui(no,dok);
                             m.load(m);
                             JFrame current = (JFrame) SwingUtilities.getWindowAncestor(sizeBox);
                             current.dispose();
