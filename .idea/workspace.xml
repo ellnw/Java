@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af522334-9040-4412-9ab1-38f890dc6061" name="Default Changelist" comment="edit commit3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Novice/Gui/MainGui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Novice/Gui/MainGui$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Novice/Gui/MainGui$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Novice/Gui/MainGui$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Novice/Gui/MainGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Novice/Gui/MainGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Novice/Main/Bag$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Novice/Main/Bag$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Novice/Main/Bag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Novice/Main/Bag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Novice/Main/NoviceGui$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Novice/Main/NoviceGui$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Novice/Main/NoviceGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Novice/Main/NoviceGui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Novice/Mons/Monster$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Novice/Mons/Monster$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Novice/Mons/Monster.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Novice/Mons/Monster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gui/MainGui.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui/MainGui.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gui/MainGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui/MainGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Bag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mons/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mons/Monster.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Gui/MainGui.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+            <state relative-caret-position="111">
+              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,16 +32,9 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/NoviceGui.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="115" column="44" selection-start-line="115" selection-start-column="44" selection-end-line="115" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Gui/MainGui.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -185,7 +167,6 @@
         <option value="$PROJECT_DIR$/src/Main/TestBorder.java" />
         <option value="$PROJECT_DIR$/src/Main/TestBox.java" />
         <option value="$PROJECT_DIR$/src/Gui/Status.java" />
-        <option value="$PROJECT_DIR$/src/Gui/MainGui.form" />
         <option value="$PROJECT_DIR$/src/Main/Novice.java" />
         <option value="$PROJECT_DIR$/src/Main/GameControl.java" />
         <option value="$PROJECT_DIR$/src/Main/ChangeClass.java" />
@@ -194,6 +175,7 @@
         <option value="$PROJECT_DIR$/src/Gui/Name.java" />
         <option value="$PROJECT_DIR$/src/Main/Bag.java" />
         <option value="$PROJECT_DIR$/src/Gui/MainGui.java" />
+        <option value="$PROJECT_DIR$/src/Gui/MainGui.form" />
       </list>
     </option>
   </component>
@@ -204,8 +186,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-50" />
-    <option name="y" value="2" />
+    <option name="x" value="492" />
+    <option name="y" value="56" />
     <option name="width" value="848" />
     <option name="height" value="742" />
   </component>
@@ -239,13 +221,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Gui" type="462c0819:PsiDirectoryNode" />
               <item name="MainGui" type="e9f4de52:FormNode" />
-            </path>
-            <path>
-              <item name="El_game" type="b2602c69:ProjectViewProjectNode" />
-              <item name="El_game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Gui" type="462c0819:PsiDirectoryNode" />
-              <item name="Name" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="El_game" type="b2602c69:ProjectViewProjectNode" />
@@ -664,9 +639,6 @@
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Mons/TestBorder.java" />
-    <entry file="file://$PROJECT_DIR$/src/Gui/MainGui.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/GameControl.java" />
     <entry file="file://$PROJECT_DIR$/src/Main/LifeItem.java" />
     <entry file="file://$PROJECT_DIR$/src/Main/Dress.java" />
@@ -682,16 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1683">
           <caret line="107" column="43" selection-start-line="107" selection-start-column="8" selection-end-line="107" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Gui/MainGui.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -776,6 +738,19 @@
           <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gui/MainGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Gui/MainGui.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
 </project>

@@ -21,11 +21,11 @@ public class MainGui {
 
 
 
+
     public MainGui(){
         welcome.setFont(new Font(" ",0,75));
-
-
-
+        Start.setFont(new Font("",0,30));
+        Exit.setFont(new Font("",0,30));
 
         Start.addActionListener(new ActionListener() {
             @Override
